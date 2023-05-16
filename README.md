@@ -1,10 +1,10 @@
 # Apache-HIVE
 
-+ [How will you improve the performance of a program in Hive?](#How-will-you-improve-the-performance-of-a-program-in-Hive)
-+ [Can we use Hive for Online Transaction Processing (OLTP) systems?](#Can-we-use-Hive-for-Online-Transaction-Processing-(OLTP)-systems)
-+ [How will you change the data type of a column in Hive?](#How-will-you-change-the-data-type-of-a-column-in-Hive)
-+ [What is Metastore in Hive?](#What-is-Metastore-in-Hive)
-+ [What is SerDe in Hive?](#What-is-SerDe-in-Hive)
+1. [How will you improve the performance of a program in Hive?](#How-will-you-improve-the-performance-of-a-program-in-Hive)
+2. [Can we use Hive for Online Transaction Processing (OLTP) systems?](#Can-we-use-Hive-for-Online-Transaction-Processing-(OLTP)-systems)
+3. [How will you change the data type of a column in Hive?](#How-will-you-change-the-data-type-of-a-column-in-Hive)
+4. [What is Metastore in Hive?](#What-is-Metastore-in-Hive)
+5. [What is SerDe in Hive?](#What-is-SerDe-in-Hive)
 + [What are the components in Hive data model?](#What-are-the-components-in-Hive-data-model)
 + [What are the different modes in which we can run Hive?](#What-are-the-different-modes-in-which-we-can-run-Hive)
 + [What are the main components of Hive?](#What-are-the-main-components-of-Hive)
