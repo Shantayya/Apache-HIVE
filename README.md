@@ -1,6 +1,6 @@
 # Apache-HIVE
 1. [What is the definition of Hive? What is the present version of Hive?](#What is the definition of Hive? What is the present version of Hive)
-2. 
+2. [How is HIVE different from RDBMS? Does hive support ACID transactions. If not then give the proper reason.](How is HIVE different from RDBMS? Does hive support ACID transactions. If not then give the proper reason)
 3. [How will you improve the performance of a program in Hive?](#How-will-you-improve-the-performance-of-a-program-in-Hive)
 4. [Can we use Hive for Online Transaction Processing (OLTP) systems?](#Can-we-use-Hive-for-Online-Transaction-Processing-(OLTP)-systems)
 5. [How will you change the data type of a column in Hive?](#How-will-you-change-the-data-type-of-a-column-in-Hive)
@@ -103,6 +103,29 @@ Stable release: 3.1.3
 Preview release: 4.0.0-alpha-2
 
 [Table of Contents](#Apache-Hive)
+
+## How is HIVE different from RDBMS? Does hive support ACID transactions. If not then give the proper reason.
+| RDBMS | HQL |
+| --- | --- |
+| It is used to maintain database. | It is used to maintain data warehouse. | 
+| Schema is fixed in RDBMS. | Schema varies in it. |
+| Normalized data is stored.| Normalized and de-normalized both type of data is stored. |
+| It doesn’t support partitioning. | It supports automation partition. |
+| No partition method is used. | Sharding method is used for partition. |
+
+Hive is a data warehouse database where the data is typically loaded from batch processing for analytical purposes and older versions of Hive doesn’t support ACID transactions on tables. Though in newer versions Starting Version 0.14,  it supports by default ACID transactions are disabled and you need to enable it before start using it.
+
+Hive supports full ACID semantics at the row level so that one application can add rows while another reads from the same       partition without interfering with each other.
+
+In summary to enable ACID like transactions on Hive, you need to do the follwoing.
++ Enable ACID Transaction Manager (DbTxnManager) on hive session
++ Enable Concurrency
+    + SET hive.support.concurrency=true;
+    + SET hive.txn.manager=org.apache.hadoop.hive.ql.lockmgr.DbTxnManager;
++ Create Table by enabling transactional (TBLPROPERTIES (‘transactional’=’true’))
++ Create Table with ORC storage type
++ Insert data into a table using INSERT INTO
++ Finally, Run UPDATE and DELETE HiveQL queries on the table
 
 ## How will you improve the performance of a program in Hive?
 There are many ways to improve the performance of a Hive program. Some of these are as follows:
