@@ -1,5 +1,5 @@
 # Apache-HIVE
-1. [What is the definition of Hive? What is the present version of Hive?](#What is the definition of Hive? What is the present version of Hive)
++ [What is the definition of Hive? What is the present version of Hive?](#What is the definition of Hive? What is the present version of Hive)
 2. [How will you improve the performance of a program in Hive?](#How-will-you-improve-the-performance-of-a-program-in-Hive)
 3. [Can we use Hive for Online Transaction Processing (OLTP) systems?](#Can-we-use-Hive-for-Online-Transaction-Processing-(OLTP)-systems)
 4. [How will you change the data type of a column in Hive?](#How-will-you-change-the-data-type-of-a-column-in-Hive)
@@ -95,11 +95,13 @@
 94.  [What is Generic Udf in Hive?](#What-is-Generic-Udf-in-Hive)
 95.  [How do you specify Table Creator Name when creating Table in Hive?](#How-do-you-specify-Table-Creator-Name-when-creating-Table-in-Hive)
 
-[Table of Contents](#Apache-Hive)
 ## What is the definition of Hive? What is the present version of Hive?
 Apache Hive is an open-source data warehouse solution for Hadoop infrastructure. It is used to process structured data of large datasets and provides a way to run HiveQL queries.
+
 Stable release: 3.1.3
 Preview release: 4.0.0-alpha-2
+
+[Table of Contents](#Apache-Hive)
 
 ## How will you improve the performance of a program in Hive?
 There are many ways to improve the performance of a Hive program. Some of these are as follows:
